@@ -25,3 +25,5 @@ document-qa-rag/
 └── README.md              # Project documentation
 ```
 
+![ollama run llama3.2:1b](ss_resources/image.png)
+![ollama is working from python script](ss_resources/image.png)
