@@ -26,4 +26,7 @@ document-qa-rag/
 ```
 
 ![ollama run llama3.2:1b](ss_resources/image.png)
-![ollama is working from python script](ss_resources/image.png)
+![ollama is working from python script](ss_resources/image_2.png)
+
+
+![QA is working in the app UI](ss_resources/image_3.png)

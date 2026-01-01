@@ -3,7 +3,8 @@ Manages vector database operations: creation, persistence, and retrieval.
 """
 from typing import List, Optional
 from langchain.schema import Document
-from langchain_community.embeddings import HuggingFaceEmbeddings
+# from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
 from src.config import (

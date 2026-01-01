@@ -16,7 +16,7 @@ DOCUMENTS_DIR.mkdir(parents=True, exist_ok=True)
 VECTORSTORE_DIR.mkdir(parents=True, exist_ok=True)
 
 # Model Configuration
-OLLAMA_MODEL = "llama3.2"  # Options: llama3.2, llama3.2:1b, mistral
+OLLAMA_MODEL = "llama3.2:1b"  # Options: llama3.2, llama3.2:1b, mistral
 OLLAMA_BASE_URL = "http://localhost:11434"
 
 # Embedding Model Configuration
@@ -38,7 +38,20 @@ COLLECTION_NAME = "document_qa_collection"
 TEMPERATURE = 0.2  # Lower = more focused, Higher = more creative (0-1)
 MAX_TOKENS = 512  # Maximum response length
 
-# Prompt Template
+# # Prompt Template
+# PROMPT_TEMPLATE = """You are a helpful AI assistant. Use the following pieces of context to answer the question at the end.
+
+# If you don't know the answer based on the context, just say "I don't have enough information in the provided documents to answer this question." Don't try to make up an answer.
+
+# Context:
+# {context}
+
+# Question: {question}
+
+# Helpful Answer:"""
+
+
+# NEW - Uses {input} to match retrieval chain
 PROMPT_TEMPLATE = """You are a helpful AI assistant. Use the following pieces of context to answer the question at the end.
 
 If you don't know the answer based on the context, just say "I don't have enough information in the provided documents to answer this question." Don't try to make up an answer.
@@ -46,6 +59,6 @@ If you don't know the answer based on the context, just say "I don't have enough
 Context:
 {context}
 
-Question: {question}
+Question: {input}
 
 Helpful Answer:"""
