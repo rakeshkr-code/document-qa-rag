@@ -1,0 +1,3 @@
+- A basic codebase to achieve the QnA task from given document 
+- Improve each component one by one, start with "text extraction from the document"
+- Make a text extraction module and start with Task: Classify PDF types and find which module is best. 
